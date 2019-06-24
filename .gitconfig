@@ -1,0 +1,21 @@
+[core]
+	excludesfile = /Users/joeprevite/.gitignore_global
+	ignorecase = false
+	editor = /usr/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Joe Previte
+	email = jjprevite@gmail.com
+[alias]
+	p = !git push origin $(git rev-parse --abbrev-ref HEAD)
+	n = !git checkout -b
+        co = !git checkout
+        unstage = !git reset HEAD --
+        c = "!git add -A && git commit -m "
+[push]
+	default = current

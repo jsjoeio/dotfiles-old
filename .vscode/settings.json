@@ -1,0 +1,62 @@
+{
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "prettier.tabWidth": 2,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.fontFamily": "Victor Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 17,
+  "editor.lineHeight": 25,
+  "editor.letterSpacing": 0.5,
+  "files.trimTrailingWhitespace": true,
+  "editor.fontWeight": "400",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 5,
+  "editor.cursorBlinking": "solid",
+  "explorer.confirmDelete": false,
+  "window.zoomLevel": 0,
+  "explorer.confirmDragAndDrop": false,
+  "telemetry.enableTelemetry": false,
+  "git.enableSmartCommit": true,
+  "newFile.defaultFileExtension": ".js",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "gitlens.advanced.messages": {
+      "suppressShowKeyBindingsNotice": true
+  },
+  "workbench.colorTheme": "Solarized Dark",
+  "vscode_custom_css.imports": [
+      "file:///Users/joeprevite/.vscodestyles.css"
+  ],
+  "vscode_custom_css.policy": true,
+  "editor.renderWhitespace": "none",
+  "javascript.validate.enable": false,
+  "zenMode.hideTabs": false,
+  "zenMode.centerLayout": false,
+  "python.pythonPath": "/usr/local/bin/python3",
+  "workbench.activityBar.visible": true,
+  "files.autoSave": "afterDelay",
+  "editor.glyphMargin": false,
+  "editor.folding": false,
+  "terminal.integrated.rendererType": "dom",
+  "javascript.implicitProjectConfig.checkJs": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveshare.featureSet": "insiders",
+  "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.panel.defaultLocation": "right",
+  "standard.autoFixOnSave": true,
+  "standard.options": {
+      "globals": ["describe", "test", "expect"]
+  },
+  "[yaml]": {
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
+}

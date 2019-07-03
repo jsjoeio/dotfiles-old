@@ -1,5 +1,4 @@
 [core]
-	excludesfile = /Users/joeprevite/.gitignore_global
 	ignorecase = false
 	editor = /usr/bin/vim
 [user]

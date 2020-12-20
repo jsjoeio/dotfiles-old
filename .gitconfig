@@ -2,7 +2,7 @@
 	ignorecase = false
 	editor = /usr/bin/vim
 [user]
-	name = JavaScript Joe
+	name = Joe Previte
 	email = jjprevite@gmail.com
 [alias]
 	p = !git push origin $(git rev-parse --abbrev-ref HEAD)

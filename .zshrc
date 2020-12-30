@@ -105,3 +105,4 @@ alias detached='f() { /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Ch
 #
 source /Users/$ME/.js/.jsrc
 export GPG_TTY=$(tty)
+export $HOME/.cargo/bin

@@ -3,7 +3,6 @@
 # install zsh and set it up
 sudo apt install zsh
 sudo chsh -s $(which zsh)
-zsh
 
 # install jq
 # helpful for installing vsx extensions

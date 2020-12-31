@@ -1,4 +1,8 @@
 #!/bin/bash
+# change timezone to Phoenix
+# This is important because when I open the daily note in Foam
+# I want it to be today in my timezone
+export TZ="/usr/share/zoneinfo/America/Phoenix"
 
 # install zsh and set it up
 sudo apt install zsh

@@ -5,9 +5,12 @@
 export TZ="/usr/share/zoneinfo/America/Phoenix"
 
 # install zsh and set it up
-sudo apt install zsh
+sudo apt install -y zsh
 sudo chsh -s $(which zsh)
 
 # install jq
 # helpful for installing vsx extensions
-sudo apt-get install jq
+sudo apt-get -y install jq
+
+# for developing code-server
+export PKG_CONFIG_PATH=/usr/bin/pkg-config

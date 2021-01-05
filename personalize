@@ -10,7 +10,9 @@ sudo chsh -s $(which zsh)
 
 # install jq
 # helpful for installing vsx extensions
+echo "Installing jq..."
 sudo apt-get -y install jq
+echo "Installed jq version $(jq --version)"
 
 # for developing code-server
 export PKG_CONFIG_PATH=/usr/bin/pkg-config

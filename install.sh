@@ -5,8 +5,12 @@
 export TZ="/usr/share/zoneinfo/America/Phoenix"
 
 # install zsh and set it up
-sudo pacman --noconfirm -S zsh
-curl -L http://install.ohmyz.sh | sh
+echo "Installing zsh..."
+sudo apt install -y zsh
+echo "Installed zsh version $(zsh --version)"
+export SHELL=/bin/zsh
+exec /bin/zsh -l
+echo "SHELL now set to $SHELL"
 
 # install jq
 # helpful for installing vsx extensions

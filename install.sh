@@ -5,8 +5,8 @@
 export TZ="/usr/share/zoneinfo/America/Phoenix"
 
 # install zsh and set it up
-sudo apt install -y zsh
-sudo chsh -s $(which zsh)
+sudo pacman --noconfirm -S zsh
+curl -L http://install.ohmyz.sh | sh
 
 # install jq
 # helpful for installing vsx extensions
@@ -16,3 +16,4 @@ echo "Installed jq version $(jq --version)"
 
 # for developing code-server
 export PKG_CONFIG_PATH=/usr/bin/pkg-config
+

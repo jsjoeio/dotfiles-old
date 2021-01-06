@@ -10,6 +10,9 @@ sudo apt install -y zsh
 echo "Installed zsh version $(zsh --version)"
 sudo chsh -s $(which zsh) coder
 
+# install the zsh-syntax-highlighting plugin
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 # install jq
 # helpful for installing vsx extensions
 echo "Installing jq..."
@@ -18,4 +21,7 @@ echo "Installed jq version $(jq --version)"
 
 # for developing code-server
 export PKG_CONFIG_PATH=/usr/bin/pkg-config
+
+# install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 

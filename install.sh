@@ -8,7 +8,7 @@ export TZ="/usr/share/zoneinfo/America/Phoenix"
 echo "Installing zsh..."
 sudo apt install -y zsh
 echo "Installed zsh version $(zsh --version)"
-sudo chsh -s $(which zsh) coder
+sudo chsh -s $(which zsh) $USER
 
 # install the zsh-syntax-highlighting plugin
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting

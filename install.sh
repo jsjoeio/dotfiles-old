@@ -26,4 +26,5 @@ export PKG_CONFIG_PATH=/usr/bin/pkg-config
 
 # install Rust
 curl https://sh.rustup.rs -sSf | sh -s -- -y
+source $HOME/.cargo/env
 

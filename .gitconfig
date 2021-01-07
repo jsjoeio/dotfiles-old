@@ -4,6 +4,7 @@
 [user]
 	name = Joe Previte
 	email = jjprevite@gmail.com
+	signingkey = 23C820F48937A3E8
 [alias]
 	p = !git push origin $(git rev-parse --abbrev-ref HEAD)
 	n = !git checkout -b

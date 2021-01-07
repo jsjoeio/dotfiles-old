@@ -28,3 +28,7 @@ export PKG_CONFIG_PATH=/usr/bin/pkg-config
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 source $HOME/.cargo/env
 
+# install GNUPG
+# needed to generate key to verify commits
+sudo apt-get install gnupg
+

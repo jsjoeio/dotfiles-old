@@ -72,6 +72,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 

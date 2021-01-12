@@ -69,6 +69,7 @@ DISABLE_UPDATE_PROMPT="true"
 plugins=(
   git
   zsh-syntax-highlighting
+  golang
 )
 
 source $ZSH/oh-my-zsh.sh

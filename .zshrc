@@ -108,3 +108,10 @@ alias detached='f() { /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Ch
 # source /Users/$ME/.js/.jsrc
 export GPG_TTY=$(tty)
 # export $HOME/.cargo/bin
+#
+# For Go
+export GOPATH=$HOME/golang
+export GOBIN=$GOPATH/bin
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOPATH
+export PATH=$PATH:$GOROOT/bin

@@ -30,5 +30,8 @@ source $HOME/.cargo/env
 
 # install GNUPG
 # needed to generate key to verify commits
-sudo apt-get install gnupg
+sudo apt-get -y install gnupg
+
+# Install Golang for code-server
+sudo apt-get -y install golang
 

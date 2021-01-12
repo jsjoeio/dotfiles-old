@@ -33,5 +33,5 @@ source $HOME/.cargo/env
 sudo apt-get -y install gnupg
 
 # Install Golang for code-server
-sudo apt update && sudo apt install golang-go
+sudo apt -y install golang-go
 

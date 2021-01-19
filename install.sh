@@ -34,6 +34,7 @@ sudo apt-get -y install jq
 echo -e "\nInstalled jq version $(jq --version)"
 
 # for developing code-server
+sudo apt-get -y install libx11-dev libxkbfile-dev
 export PKG_CONFIG_PATH=/usr/bin/pkg-config
 
 # Install Rust

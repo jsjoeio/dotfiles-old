@@ -1,8 +1,64 @@
 #!/bin/bash
-# change timezone to Phoenix
-# This is important because when I open the daily note in Foam
-# I want it to be today in my timezone
-export TZ="/usr/share/zoneinfo/America/Phoenix"
+###########################
+# README
+# This script is meant to be used in Coder for my environment set up
+# It assumes I'm using a base image that has Node, Yarn, Go and is Ubuntu-based.
+###########################
+echo -e "
+░░░░░██╗░█████╗░███████╗██╗░██████╗  ██╗███╗░░██╗░██████╗████████╗░█████╗░██╗░░░░░██╗░░░░░
+░░░░░██║██╔══██╗██╔════╝╚█║██╔════╝  ██║████╗░██║██╔════╝╚══██╔══╝██╔══██╗██║░░░░░██║░░░░░
+░░░░░██║██║░░██║█████╗░░░╚╝╚█████╗░  ██║██╔██╗██║╚█████╗░░░░██║░░░███████║██║░░░░░██║░░░░░
+██╗░░██║██║░░██║██╔══╝░░░░░░╚═══██╗  ██║██║╚████║░╚═══██╗░░░██║░░░██╔══██║██║░░░░░██║░░░░░
+╚█████╔╝╚█████╔╝███████╗░░░██████╔╝  ██║██║░╚███║██████╔╝░░░██║░░░██║░░██║███████╗███████╗
+░╚════╝░░╚════╝░╚══════╝░░░╚═════╝░  ╚═╝╚═╝░░╚══╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚══════╝
+
+░██████╗░█████╗░██████╗░██╗██████╗░████████╗
+██╔════╝██╔══██╗██╔══██╗██║██╔══██╗╚══██╔══╝
+╚█████╗░██║░░╚═╝██████╔╝██║██████╔╝░░░██║░░░
+░╚═══██╗██║░░██╗██╔══██╗██║██╔═══╝░░░░██║░░░
+██████╔╝╚█████╔╝██║░░██║██║██║░░░░░░░░██║░░░
+╚═════╝░░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░░░░░░░╚═╝░░░
+"
+###########################
+
+
+
+###########################
+# Install Miscelleanous packages and tools 
+###########################
+
+# install jq
+# helpful for installing vsx extensions
+echo -e "\nInstalling jq..."
+sudo apt-get -y install jq
+echo -e "\nInstalled jq version $(jq --version)"
+
+# for developing code-server
+export PKG_CONFIG_PATH=/usr/bin/pkg-config
+
+# Install Rust
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+source $HOME/.cargo/env
+
+# Install GNUPG
+# needed to generate key to verify commits
+sudo apt-get -y install gnupg
+
+# For using NeoVim in VSCode
+sudo apt-get -y install neovim
+
+# Install Node 
+curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Install Yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
+
+###########################
+# End installing miscelleanous 
+###########################
 
 ###########################
 # zsh setup
@@ -54,26 +110,3 @@ echo -e "✅ Successfully modified the default shell"
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 # source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# install jq
-# helpful for installing vsx extensions
-echo "Installing jq..."
-sudo apt-get -y install jq
-echo "Installed jq version $(jq --version)"
-
-# for developing code-server
-export PKG_CONFIG_PATH=/usr/bin/pkg-config
-
-# install Rust
-curl https://sh.rustup.rs -sSf | sh -s -- -y
-source $HOME/.cargo/env
-
-# install GNUPG
-# needed to generate key to verify commits
-sudo apt-get -y install gnupg
-
-# Install Golang for code-server
-sudo apt -y install golang-go
-
-# For using NeoVim in VSCode
-sudo apt-get -y install neovim

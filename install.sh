@@ -34,7 +34,7 @@ sudo apt-get -y install jq
 echo -e "\nInstalled jq version $(jq --version)"
 
 # for developing code-server
-sudo apt-get -y install pkg-config libsecret-1-dev libx11-dev libxkbfile-dev
+sudo apt-get -y install pkg-config libsecret-1-dev libx11-dev libxkbfile-dev python
 
 # Install Rust
 curl https://sh.rustup.rs -sSf | sh -s -- -y

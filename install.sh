@@ -37,7 +37,7 @@ echo -e "\nInstalled jq version $(jq --version)"
 sudo apt-get -y install pkg-config libsecret-1-dev libx11-dev libxkbfile-dev python
 
 # Install extensions for code-server
-if [[ -d $HOME/plugins]]
+if [[ -d $HOME/plugins ]]
 then
    echo -e "\nFound plugins directory for code-server plugins and extensions."
 else 

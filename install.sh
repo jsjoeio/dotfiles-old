@@ -36,6 +36,18 @@ echo -e "\nInstalled jq version $(jq --version)"
 # for developing code-server
 sudo apt-get -y install pkg-config libsecret-1-dev libx11-dev libxkbfile-dev python
 
+# Install extensions for code-server
+if [[ -d $HOME/plugins]]; then
+   echo -e "\nFound plugins directory for code-server plugins and extensions."
+else 
+   PLUGINS_DIR_NAME="plugins"
+   PLUGINS_LOCATION="$HOME/$PLUGINS_DIR_NAME"
+   echo -e "\nFailed to find plugins directory. Created a new one at $PLUGINS_LOCATION"
+   mkdir $PLUGINS_LOCATION
+   echo -e "\nSuccessfully made plugins directory."
+fi
+curl 'https://open-vsx.org/api/foam/foam-vscode' | jq '.files.download' | xargs curl --compressed -L -o $PLUGINS_LOCATION/foam.vsix
+
 # Install Rust
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 source $HOME/.cargo/env

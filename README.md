@@ -1,6 +1,6 @@
 # dotfiles
 
-My dotfiles
+My dotfiles - used mostly with code-server
 
 ## How to Symlink files
 

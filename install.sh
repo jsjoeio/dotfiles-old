@@ -24,7 +24,7 @@ echo -e "
 
 
 ###########################
-# Install Miscelleanous packages and tools 
+# Install Miscelleanous packages and tools
 ###########################
 
 # install jq
@@ -40,7 +40,7 @@ sudo apt-get -y install pkg-config libsecret-1-dev libx11-dev libxkbfile-dev pyt
 if [[ -d $HOME/plugins ]]
 then
    echo -e "\nFound plugins directory for code-server plugins and extensions."
-else 
+else
    PLUGINS_DIR_NAME="plugins"
    PLUGINS_LOCATION="$HOME/$PLUGINS_DIR_NAME"
    echo -e "\nFailed to find plugins directory. Created a new one at $PLUGINS_LOCATION"
@@ -60,7 +60,7 @@ sudo apt-get -y install gnupg
 # For using NeoVim in VSCode
 sudo apt-get -y install neovim
 
-# Install Node 
+# Install Node
 curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
@@ -70,7 +70,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt update && sudo apt install yarn
 
 ###########################
-# End installing miscelleanous 
+# End installing miscelleanous
 ###########################
 
 ###########################
@@ -113,6 +113,9 @@ elif [ -e ${ZSHRC_LINK} ] ; then
 else
    echo -e "\nUh-oh! .zshrc missing."
 fi
+
+# Install zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 echo -e "⤵ Changing the default shell"
 sudo chsh -s $(which zsh) $USER

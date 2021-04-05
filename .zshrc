@@ -72,12 +72,12 @@ DISABLE_UPDATE_PROMPT="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  # zsh-syntax-highlighting
   golang
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
-# TODO add back in later 
+# TODO add back in later
 # source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration

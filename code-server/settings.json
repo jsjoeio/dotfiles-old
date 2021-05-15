@@ -1,7 +1,6 @@
 {
-    "workbench.colorTheme": "Activate UMBRA protocol",
     "editor.tabSize": 2,
-    "editor.fontSize": 17,
+    "editor.fontSize": 14,
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "line",
     "editor.minimap.renderCharacters": false,
@@ -30,19 +29,37 @@
     "workbench.activityBar.visible": true,
     "editor.glyphMargin": false,
     "editor.folding": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
     "editor.quickSuggestions": true,
     "editor.suggestOnTriggerCharacters": false,
-    "editor.tabCompletion": true,
+    "editor.tabCompletion": "on",
     "workbench.statusBar.visible": true,
     "vim.sneak": true,
-    "workbench.iconTheme": "vscode-icons",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.tabWidth": 2,
-    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.defaultProfile.osx": "/bin/zsh",
+    "python.pythonPath": "/usr/local/bin/python3",
     "workbench.sideBar.location": "right",
     "workbench.startupEditor": "newUntitledFile",
     "files.autoSave": "afterDelay",
     "git.confirmSync": false,
     "extensions.ignoreRecommendations": false,
-    "git.autofetch": true
-}
+    "git.autofetch": true,
+    "prettier.semi": false,
+    "workbench.editorAssociations": [
+      {
+        "viewType": "jupyter.notebook.ipynb",
+        "filenamePattern": "*.ipynb"
+      }
+    ],
+    "workbench.colorTheme": "Activate UMBRA protocol",
+    "vim.easymotion": true,
+    "vim.leader": "<space>",
+    "editor.formatOnSave": true
+  }

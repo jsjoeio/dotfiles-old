@@ -74,6 +74,7 @@ plugins=(
   git
   golang
   zsh-syntax-highlighting
+  deno
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -108,6 +109,9 @@ source $ZSH/oh-my-zsh.sh
 alias prune="git fetch --all -p; git branch -vv | grep \": gone]\" | awk '{ print \$1 }' | xargs -n 1 git branch -D"
 alias detached='f() { /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --app=$1 };f'
 
+alias fixup='git add . && git f && git as && ggfl'
+
+function sha256sum() { shasum -a 256 "$@" ; }
 # TODO
 #
 # source /Users/$ME/.js/.jsrc
@@ -120,3 +124,14 @@ export GOBIN=$GOPATH/bin
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOPATH
 export PATH=$PATH:$GOROOT/bin
+# export HTTP_PROXY=https://134.8.5.4
+# export HTTPS_PROXY=https://134.8.5.4
+
+export NVM_DIR="$HOME/.nvm"
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+
+# for ScriptKit
+export PATH="$PATH:/Users/jp/.kenv/bin"
+
+# for Deno, specifically Denox
+export PATH="/Users/jp/.deno/bin:$PATH"
